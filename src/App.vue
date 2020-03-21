@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <post v-for="post in posts" :key="post.id" :post="post"></post>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Post from './components/Post/Index.vue';
+import posts from './store/mock';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Post,
   },
+  data: () => ({
+    posts,
+  }),
 };
 </script>
 
