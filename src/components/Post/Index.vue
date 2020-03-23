@@ -36,9 +36,11 @@ export default {
 .post {
   background-color: $white;
   border: 1px solid $sinbad;
+  border-radius: 4px;
+  min-height: 270px;
 
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 }
 </style>

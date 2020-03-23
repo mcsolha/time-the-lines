@@ -2,11 +2,13 @@
   <div class="post-header">
     <div class="post-header__row">
       <div class="post-header__img-container">
-        <img src="../../assets/logo.png" alt=".. niutubiu">
+        <img :src="post.category.imgSrc" alt=".. niutubiu">
       </div>
       <div class="post-header__title">{{ post.category.name }}</div>
       <div class="post-header__empty-column"></div>
-      <div class="post-header__options">...</div>
+      <div class="post-header__options">
+        <font-awesome-icon :icon="['fas', 'ellipsis-h']"></font-awesome-icon>
+      </div>
     </div>
     <div class="post-header__row"></div>
   </div>

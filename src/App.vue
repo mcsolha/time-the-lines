@@ -1,6 +1,10 @@
 <template>
   <div id="app" class="container">
-    <post v-for="post in posts" :key="post.id" :post="post"></post>
+    <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <post v-for="post in posts" :key="post.id" :post="post"></post>
+      </div>
+    </div>
   </div>
 </template>
 
