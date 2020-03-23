@@ -18,10 +18,15 @@ export default class PostModel {
     return this._category;
   }
 
-  constructor({ id, publishDate, midiaSrc, category }) {
+  get textContent() {
+    return this._textContent;
+  }
+
+  constructor({ id, publishDate, midiaSrc, category, textContent }) {
     this._id = id;
     this._publishDate = publishDate;
     this._midiaSrc = midiaSrc;
     this._category = category;
+    this._textContent = textContent;
   }
 }

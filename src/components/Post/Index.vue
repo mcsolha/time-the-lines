@@ -1,6 +1,9 @@
 <template>
   <div class="post">
     <post-header class="post__header" :post="post"></post-header>
+    <post-content :post="post"> </post-content>
+    <post-media :post="post"> </post-media>
+    <post-actions :post="post"></post-actions>
     <!-- <post-midia-content class="post__midia-content"></post-midia-content>
     <post-text-content class="post__text-content"></post-text-content>
     <post-actions></post-actions> -->
@@ -10,6 +13,9 @@
 <script>
 import PostModel from '../../js/models/PostModel';
 import PostHeader from './PostHeader.vue';
+import PostMedia from './PostMedia.vue';
+import PostContent from './PostContent.vue';
+import PostActions from './PostActions.vue';
 
 export default {
   name: 'Post',
@@ -23,6 +29,9 @@ export default {
 
   components: {
     PostHeader,
+    PostMedia,
+    PostContent,
+    PostActions,
   },
 
   methods: {
